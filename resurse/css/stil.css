@@ -1,0 +1,436 @@
+:root {
+    --primary-color: #0C113D;       /* Culoare principală */
+    --secondary-color: #294AF0;     /* Culoare secundară */
+    --accent-color: #2989F0;        /* Culoare accent */
+    --highlight-color: #29F0D8;     /* Culoare de highlight */
+    --complementary-color: #4729F0; /* Culoare complementară */
+    --light-background-color: #78B2F0; /* Culoare de fundal deschisă */
+    --border-color: #dee2e6;
+    --color-odd-column: #0C113D;
+    --color-even-column: #294AF0;
+    --padding-page-large: 50px;
+    --padding-page-medium: 30px;
+    --padding-page-small: 15px;
+    --gap-large: 15px;
+    --gap-medium: 10px;
+    --gap-small: 5px;
+    --padding-text: 1em;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    background-color: var(--light-background-color);
+    color: var(--primary-color);
+    font-family: 'Open Sans', Arial, sans-serif; /* Utilizare font 'Open Sans' */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1em;
+    text-align: center;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 1em;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: var(--highlight-color);
+}
+
+section {
+    padding: 2em;
+    border-bottom: 1px solid var(--secondary-color);
+    background-color: var(--light-background-color); /* Setare fundal pentru secțiune */
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+section h2 {
+    color: var(--complementary-color);
+}
+
+figure {
+    margin: 0;
+    padding: 1em;
+    background-color: white;
+    border: 1px solid var(--secondary-color);
+}
+
+figcaption {
+    color: var(--accent-color);
+    font-style: italic;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1em;
+    text-align: center;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+address a, footer a {
+    color: white;
+    text-decoration: none;
+}
+
+address a:hover, footer a:hover {
+    color: var(--highlight-color);
+}
+
+/* Container pentru tabel cu overflow orizontal pe ecrane mici */
+.table-container {
+    overflow-x: auto;
+}
+
+/* Stilizare tabel */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Colapsare borduri pentru celule tabel */
+    border: 5px double var(--primary-color); /* Border dublu în jurul tabelului */
+    margin-bottom: 1em;
+}
+
+/* Poziționare caption tabel sub tabel */
+caption {
+    caption-side: bottom;
+    font-size: 1.2em;
+    padding-top: 0.5em;
+}
+
+/* Stilizare pentru celulele headerului tabelului */
+thead th {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 0.5em;
+}
+
+/* Stilizare pentru rândurile impare */
+tbody tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+/* Stilizare pentru rândurile pare */
+tbody tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+/* Stilizare pentru celulele tabelului */
+tbody td, thead th {
+    border: 1px solid var(--secondary-color);
+    text-align: left;
+    padding: 0.5em;
+}
+
+/* Culoare text pentru coloanele impare */
+tbody td:nth-child(odd) {
+    color: var(--color-odd-column);
+}
+
+/* Culoare text pentru coloanele pare */
+tbody td:nth-child(even) {
+    color: var(--color-even-column);
+}
+
+/* Stilizare pentru celulele footerului tabelului */
+tfoot td {
+    background-color: var(--secondary-color);
+    color: white;
+    text-align: center;
+    padding: 0.5em;
+    border-top: 1px solid var(--secondary-color);
+}
+
+/* Efect hover pentru rândurile tabelului */
+tbody tr:hover {
+    background-color: var(--highlight-color);
+    color: white;
+    border: 5px solid var(--highlight-color);
+    transition: all 0.75s ease-in-out; /* Tranziție lină pentru efectul hover */
+}
+
+/* Efect hover pentru celulele tabelului */
+tbody tr:hover td {
+    border: 5px solid var(--highlight-color);
+}
+
+/* Stilizare pentru containerul iframe și linkurile */
+:root {
+    --primary-color: #0C113D;       /* Culoare principală */
+    --secondary-color: #294AF0;     /* Culoare secundară */
+    --accent-color: #2989F0;        /* Culoare accent */
+    --highlight-color: #29F0D8;     /* Culoare de highlight */
+    --complementary-color: #4729F0; /* Culoare complementară */
+    --light-background-color: #78B2F0; /* Culoare de fundal deschisă */
+    --border-color: #dee2e6;
+    --color-odd-column: #0C113D;
+    --color-even-column: #294AF0;
+    --padding-page-large: 50px;
+    --padding-page-medium: 30px;
+    --padding-page-small: 15px;
+    --gap-large: 15px;
+    --gap-medium: 10px;
+    --gap-small: 5px;
+    --padding-text: 1em;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    background-color: var(--light-background-color);
+    color: var(--primary-color);
+    font-family: 'Open Sans', Arial, sans-serif; /* Utilizare font 'Open Sans' */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1em;
+    text-align: center;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 1em;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: var(--highlight-color);
+}
+
+section {
+    padding: 2em;
+    border-bottom: 1px solid var(--secondary-color);
+    background-color: var(--light-background-color); /* Setare fundal pentru secțiune */
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+section h2 {
+    color: var(--complementary-color);
+}
+
+figure {
+    margin: 0;
+    padding: 1em;
+    background-color: white;
+    border: 1px solid var(--secondary-color);
+}
+
+figcaption {
+    color: var(--accent-color);
+    font-style: italic;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1em;
+    text-align: center;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+address a, footer a {
+    color: white;
+    text-decoration: none;
+}
+
+address a:hover, footer a:hover {
+    color: var(--highlight-color);
+}
+
+/* Container pentru tabel cu overflow orizontal pe ecrane mici */
+.table-container {
+    overflow-x: auto;
+}
+
+/* Stilizare tabel */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Colapsare borduri pentru celule tabel */
+    border: 5px double var(--primary-color); /* Border dublu în jurul tabelului */
+    margin-bottom: 1em;
+}
+
+/* Poziționare caption tabel sub tabel */
+caption {
+    caption-side: bottom;
+    font-size: 1.2em;
+    padding-top: 0.5em;
+}
+
+/* Stilizare pentru celulele headerului tabelului */
+thead th {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 0.5em;
+}
+
+/* Stilizare pentru rândurile impare */
+tbody tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+/* Stilizare pentru rândurile pare */
+tbody tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+/* Stilizare pentru celulele tabelului */
+tbody td, thead th {
+    border: 1px solid var(--secondary-color);
+    text-align: left;
+    padding: 0.5em;
+}
+
+/* Culoare text pentru coloanele impare */
+tbody td:nth-child(odd) {
+    color: var(--color-odd-column);
+}
+
+/* Culoare text pentru coloanele pare */
+tbody td:nth-child(even) {
+    color: var(--color-even-column);
+}
+
+/* Stilizare pentru celulele footerului tabelului */
+tfoot td {
+    background-color: var(--secondary-color);
+    color: white;
+    text-align: center;
+    padding: 0.5em;
+    border-top: 1px solid var(--secondary-color);
+}
+
+/* Efect hover pentru rândurile tabelului */
+tbody tr:hover {
+    background-color: var(--highlight-color);
+    color: white;
+    border: 5px solid var(--highlight-color);
+    transition: all 0.75s ease-in-out; /* Tranziție lină pentru efectul hover */
+}
+
+/* Efect hover pentru celulele tabelului */
+tbody tr:hover td {
+    border: 5px solid var(--highlight-color);
+}
+
+/* Stilizare pentru containerul iframe și linkurile */
+.container-iframe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    position: relative; /* Added to allow absolute positioning of buttons */
+}
+
+iframe {
+    width: 560px;
+    height: 315px;
+    border: 2px solid #294AF0;
+    border-radius: 8px;
+    margin-bottom: 20px; /* Reduced margin below the iframe */
+}
+
+.taburi-iframe {
+    display: flex;
+    justify-content: space-between; /* Ensures buttons are spaced evenly */
+    width: 100%;
+    max-width: 560px; /* Matches the iframe width */
+}
+
+.taburi-iframe a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 50px;
+    background: linear-gradient(to bottom, var(--secondary-color) 0%, transparent 90%);
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    text-align: center;
+    margin: 0 5px;
+    border: 2px solid var(--primary-color);
+    border-style: double;
+    border-width: 5px;
+    border-radius: 0 0 25px 25px;
+    text-decoration: none;
+    font-size: 1em;
+    line-height: 1.2; /* Adjusted line-height for closer text lines */
+    padding: 0 10px; /* Adjusted padding for better text fit */
+    transition: all 1.5s ease; /* Transition for background position */
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.taburi-iframe a:hover {
+    background-color: var(--light-background-color);
+}
+
+iframe {
+    width: 560px;
+    height: 315px;
+    border: 2px solid #294AF0;
+    border-radius: 8px;
+    margin-bottom: 5px; /* Reduced margin below the iframe */
+}
+
+iframe {
+    width: 560px;
+    height: 315px;
+    border: 2px solid #294AF0;
+    border-radius: 8px;
+    margin-bottom: 5px; /* Reduced margin below the iframe */
+}
+
+@media (max-width: 768px) {
+    .taburi-iframe {
+        flex-direction: column;
+        align-items: center;
+        position: static;
+    }
+
+    .taburi-iframe a {
+        margin-bottom: 10px;
+    }
+
+    iframe {
+        width: 100%;
+        height: auto;
+    }
+}

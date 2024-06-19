@@ -1,0 +1,34 @@
+/* Stiluri pentru formula MathML */
+math {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.2;
+}
+
+.formula-rmb {
+    font-weight: bold;
+    color: var(--highlight-color);
+}
+
+.formula-equal {
+    color: var(--primary-color);
+}
+
+.formula-sum {
+    font-size: 1.5em;
+    color: var(--secondary-color);
+}
+
+.formula-coef {
+    font-style: italic;
+    color: var(--accent-color);
+}
+
+.formula-var {
+    color: var(--complementary-color);
+}
+
+.formula-plus,
+.formula-minus,
+.formula-mult {
+    color: var(--border-color);
+}

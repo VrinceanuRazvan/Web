@@ -1,0 +1,124 @@
+:root {
+    --padding-page-large: 50px;
+    --padding-page-medium: 30px;
+    --padding-page-small: 15px;
+    --gap-large: 15px;
+    --gap-medium: 10px;
+    --gap-small: 5px;
+    --padding-text: 1em;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+html {
+    font-size: 18px;
+    padding-left: var(--padding-page-large);
+    padding-right: var(--padding-page-large);
+}
+
+body {
+    margin: 0;
+}
+
+#grid-pagina {
+    display: grid;
+    gap: var(--gap-large);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+        "welcome welcome welcome welcome"
+        "welcome welcome welcome welcome"
+        "diverse diverse products products"
+        "users stats products products"
+        "users stats products products"
+        "announcements events events info"
+        "index-intrebari index-intrebari index-intrebari index-intrebari";
+}
+
+#grid-pagina > * {
+    padding: var(--padding-text);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+#grid-pagina > figure {
+    margin: 0;
+}
+
+#welcome {
+    grid-area: welcome;
+}
+
+#products {
+    grid-area: products;
+    overflow-x: auto;
+}
+
+#events {
+    grid-area: events;
+}
+
+#announcements {
+    grid-area: announcements;
+}
+
+#users {
+    grid-area: users;
+}
+
+#stats {
+    grid-area: stats;
+}
+
+#info {
+    grid-area: info;
+}
+
+#diverse {
+    grid-area: diverse;
+}
+
+#index-intrebari {
+    grid-area: index-intrebari;
+}
+
+img, video {
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    max-width: 100%;
+    min-width: 200px;
+}
+
+@media screen and (max-width: 1200px) {
+    html {
+        font-size: 15px;
+        padding-left: var(--padding-page-medium);
+        padding-right: var(--padding-page-medium);
+    }
+
+    #grid-pagina {
+        gap: var(--gap-medium);
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+            "welcome welcome"
+            "products diverse"
+            "users stats"
+            "announcements events"
+            "events info"
+            "diverse diverse"
+            "index-intrebari index-intrebari";
+    }
+}
+
+@media screen and (max-width: 800px) {
+    html {
+        font-size: 12px;
+        padding-left: var(--padding-page-small);
+        padding-right: var(--padding-page-small);
+    }
+
+    #grid-pagina {
+        display: block;
+        gap: var(--gap-small);
+    }
+}
