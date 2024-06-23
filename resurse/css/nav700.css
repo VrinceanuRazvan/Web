@@ -1,0 +1,60 @@
+/* Responsive Styles */
+@media (max-width: 700px) {
+    .hamburger-menu {
+        display: block;
+    }
+
+    nav.main-nav ul.menu-items {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav.main-nav ul.menu-items li {
+        width: 100%;
+        box-shadow: none !important; /* Remove shadow for small screens */
+    }
+
+    nav.main-nav ul.menu-items li a {
+        box-shadow: none !important; /* Remove shadow for small screens */
+    }
+
+    nav.main-nav ul.menu-items li a::before {
+        display: none; /* Remove hover effect for small screens */
+    }
+
+    nav.main-nav ul.menu-items li a.home span {
+        display: none; /* Hide the "Home" button text */
+    }
+
+    nav.main-nav ul.menu-items li a.home::after {
+        display: none;
+    }
+
+    nav.main-nav ul.menu-items li a.home::before {
+        display: none;
+    }
+
+    nav.main-nav ul.menu-items li a::after {
+        display: none; /* Remove underline effect for small screens */
+    }
+
+    nav.main-nav ul.menu-items li a:hover {
+        background-color: var(--secondary-color); /* Only change background color */
+    }
+
+    nav.main-nav ul.menu-items li .submenu {
+        border: none; /* Remove border for small screens */
+    }
+
+    nav.main-nav ul.menu-items li .submenu li a::after {
+        display: none; /* Remove underline effect for submenu items on small screens */
+    }
+    nav.main-nav ul.menu-items li a.home::after {
+        display: none; /* Remove underline effect for submenu items on small screens */
+    }
+
+    .menu-toggle:checked ~ ul.menu-items {
+        display: flex;
+    }
+}

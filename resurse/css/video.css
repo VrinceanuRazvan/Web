@@ -1,0 +1,60 @@
+:root {
+    --primary-color: #0C113D;
+    --secondary-color: #294AF0;
+    --accent-color: #2989F0;
+    --highlight-color: #29F0D8;
+    --complementary-color: #4729F0;
+    --light-background-color: #78B2F0;
+    --border-color: #dee2e6;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    background-color: var(--light-background-color);
+    color: var(--primary-color);
+    font-family: 'Open Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.section {
+    text-align: center;
+    padding: 2em 0; /* Add padding to the section */
+}
+
+.video-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0; /* Add margin to the video */
+}
+
+video {
+    width: 100%;
+    max-width: 800px;
+    min-width: 300px;
+    display: block;
+    margin: 0 auto;
+    border: 5px solid var(--primary-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+::cue {
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-shadow: 1px 1px 2px black;
+}
+
+::cue-region {
+    display: block;
+}
+
+::cue(x1) {
+    align-self: start;
+}
+
+::cue(x2) {
+    align-self: end;
+}

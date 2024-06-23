@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <link rel="stylesheet" type="text/css" href="/resurse/css/eroare.css"
+  <%- include('../fragmente/head') %>
+</head>
+<body>
+  <%- include('../fragmente/header') %>
+  <main>
+    <div id="err-coloane">
+      <div id="err-imag">
+        <img src="/<%- locals.imagine %>" alt="Imagine eroare" />
+      </div>
+      <section>
+        <h2><%- locals.titlu %></h2>
+        <p><%- locals.text %></p>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

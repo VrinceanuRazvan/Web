@@ -89,7 +89,7 @@ img, video {
     min-width: 200px;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1000px) {
     html {
         font-size: 15px;
         padding-left: var(--padding-page-medium);
@@ -101,16 +101,17 @@ img, video {
         grid-template-columns: repeat(2, 1fr);
         grid-template-areas: 
             "welcome welcome"
-            "products diverse"
+            "products products"
+            "products products"
             "users stats"
             "announcements events"
-            "events info"
+            "announcements info"
             "diverse diverse"
             "index-intrebari index-intrebari";
     }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 700px) {
     html {
         font-size: 12px;
         padding-left: var(--padding-page-small);
@@ -118,7 +119,7 @@ img, video {
     }
 
     #grid-pagina {
-        display: block;
+        display: block !important; 
         gap: var(--gap-small);
     }
 }

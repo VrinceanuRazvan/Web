@@ -5,10 +5,10 @@ html {
   
   #link-top {
     position: fixed;
-    bottom: 20px; /* Ajustează această valoare după cum este necesar */
-    right: 20px; /* Ajustează această valoare după cum este necesar */
-    width: 60px; /* Ajustează această valoare după cum este necesar */
-    height: 60px; /* Ajustează această valoare după cum este necesar */
+    bottom: 20px; 
+    right: 20px; 
+    width: 60px; 
+    height: 60px; 
     background-color: var(--secondary-color); /* Culoarea de fundal */
     opacity: 0.7; /* Semi-transparent */
     border: 2px solid var(--primary-color); /* Bordura */

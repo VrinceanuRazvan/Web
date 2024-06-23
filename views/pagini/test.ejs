@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <%- include('../fragmente/head') %>
+  <title>Pagina Principală</title>
+</head>
+<body>
+  <%- include('../fragmente/header') %>
+  <main id="grid-pagina">
+    <section id="welcome" class="section">
+      <h2>Bine ați venit</h2>
+      <p>Descoperiți cele mai eficiente <b>suplimente</b> pentru a vă sprijini obiectivele de <b>fitness</b> și <b>sănătate</b>.</p>
+    </section>
+    <section id="products" class="section">
+      <h2>Produse</h2>
+      <figure>
+        <picture>
+          <!-- Responsive images for different screens -->
+          <source media="(min-width: 1024px)" srcset="/resurse/imagini/Proteine_Whey_Clear_large.png">
+          <source media="(min-width: 768px)" srcset="/resurse/imagini/Proteine_Whey_Clear_medium.png">
+          <img src="/resurse/imagini/Proteine_Whey_Clear_small.png" alt="Proteină Whey Clear">
+        </picture>
+        <figcaption><i>Proteină Whey Clear</i> - Ideală pentru refacerea musculară rapidă.</figcaption>
+      </figure>
+      <figure>
+        <picture>
+          <!-- Responsive images for different screens -->
+          <source media="(min-width: 1024px)" srcset="/resurse/imagini/Creatina_Monohidrata_large.png">
+          <source media="(min-width: 768px)" srcset="/resurse/imagini/Creatina_Monohidrata_medium.png">
+          <img src="/resurse/imagini/Creatina_Monohidrata_small.png" alt="Creatină Monohidrată">
+        </picture>
+        <figcaption><i>Creatină Monohidrată</i> - Îmbunătățește performanța și forța.</figcaption>
+      </figure>
+    </section>
+    <section id="events" class="section">
+      <h2>Evenimente</h2>
+      <p>Placeholder for calendar events.</p>
+    </section>
+    <section id="announcements" class="section">
+      <h2>Anunțuri</h2>
+      <p>Placeholder for announcements.</p>
+    </section>
+    <section id="users" class="section">
+      <h2>Utilizatori online</h2>
+      <p>Placeholder for online users list.</p>
+    </section>
+    <section id="stats" class="section">
+      <h2>Statistici utilizator</h2>
+      <p>Placeholder for user statistics.</p>
+    </section>
+    <section id="info" class="section">
+      <h2>Date site/server</h2>
+      <p>Placeholder for site and server data.</p>
+    </section>
+    <section id="diverse" class="section">
+      <h2>Diverse conținut</h2>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Produs</th>
+              <th>Preț</th>
+              <th>Descriere</th>
+              <th>Reducere</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Proteine Whey</td>
+              <td>150 RON</td>
+              <td>Pudră proteică pentru creșterea masei musculare</td>
+              <td rowspan="2">20%</td>
+            </tr>
+            <tr>
+              <td>Aminoacizi BCAA</td>
+              <td>120 RON</td>
+              <td>Supliment pentru recuperare și rezistență</td>
+            </tr>
+            <tr>
+              <td>Vitamine</td>
+              <td>80 RON</td>
+              <td>Complex de vitamine pentru sănătate generală</td>
+              <td>10%</td>
+            </tr>
+            <tr>
+              <td>Creatină</td>
+              <td>100 RON</td>
+              <td>Supliment pentru forță și putere</td>
+              <td>15%</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="4">Cele mai bune oferte pentru suplimente fitness!</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+      <div class="container-iframe">
+        <iframe name="ifr-video" width="560" height="315" src="https://www.youtube.com/embed/kv91H2gAwe8?si=TvfLDGABz3M6Q4nl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div class="taburi-iframe">
+          <a href="https://www.youtube.com/embed/kv91H2gAwe8?si=TvfLDGABz3M6Q4nl" target="ifr-video">Rețeta tort vanilie</a>
+          <a href="https://www.youtube.com/embed/He_-f1ZCCJE?si=Iba_-xmKrxcl6RHW" target="ifr-video">Rețeta tort ciocolată</a>
+          <a href="https://www.youtube.com/embed/Apgm6lKBfUA?si=dorucGEPaxmbVU18" target="ifr-video">Rețeta tort căpșuni</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <%- include('../fragmente/footer') %>
+</body>
+</html>

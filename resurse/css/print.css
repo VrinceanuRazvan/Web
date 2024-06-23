@@ -1,0 +1,98 @@
+@media print {
+    /* Ascunde elementele media și dependentele lor */
+    img, video, iframe, picture, figcaption, .container-iframe, .table-container, #link-top {
+        display: none !important;
+    }
+
+    /* Afișează elementele grid ca block */
+    #grid-pagina {
+        display: block;
+    }
+
+    /* Elimină stilurile linkurilor */
+    a {
+        color: black;
+        text-decoration: none;
+    }
+
+    /* Centrează titlul site-ului și afișează meniul ca o listă */
+    header, nav.main-nav {
+        display: block;
+        text-align: center;
+    }
+
+    nav.main-nav h1 {
+        margin: 0 auto;
+    }
+
+    nav.main-nav ul.menu-items {
+        display: block;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    nav.main-nav ul.menu-items li {
+        display: block;
+        padding: 5px 0;
+    }
+
+    nav.main-nav ul.menu-items li ul {
+        display: none; /* Ascunde submeniurile */
+    }
+
+    /* Page break după meniu */
+    nav.main-nav ul.menu-items::after {
+        content: '';
+        display: block;
+        page-break-after: always;
+    }
+
+    /* Page break înainte de footer */
+    footer::before {
+        content: '';
+        display: block;
+        page-break-before: always;
+    }
+
+    /* Stilizează bannerul */
+    footer p {
+        display: block;
+        width: 70%;
+        margin: 0 auto;
+        text-align: center;
+        border: 4px inset black;
+    }
+
+    /* Adaugă watermark pe fiecare pagină */
+    @page {
+        margin: 2cm 1cm;
+    }
+
+    @page :left {
+        margin-left: 3cm;
+        margin-right: 1cm;
+    }
+
+    @page :right {
+        margin-left: 1cm;
+        margin-right: 3cm;
+    }
+
+    body::after {
+        content: "Vrinceanu\nGeorge Razvan";
+        position: fixed;
+        bottom: 1cm;
+        right: 1cm;
+        width: 4cm;
+        height: 1cm;
+        border: 3px solid black;
+        border-radius: 5px;
+        text-align: center;
+        font-weight: bold;
+        opacity: 0.4;
+        page-break-inside: avoid;
+        z-index: 1000;
+        background: white;
+    }
+}

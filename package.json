@@ -1,0 +1,21 @@
+{
+  "name": "suplimente_fitness",
+  "version": "1.0.0",
+  "description": "Descoperă cele mai bune suplimente fitness pentru a-ți îmbunătăți performanța la antrenament. De la proteine la vitamine, avem tot ce ai nevoie",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Suplimente",
+    "Fitness",
+    "Proteine",
+    "Aminoacizi",
+    "Vitamine",
+    "Echipament",
+    "de",
+    "Antrenament"
+  ],
+  "author": "Vrinceanu George Razvan",
+  "license": "ISC"
+}

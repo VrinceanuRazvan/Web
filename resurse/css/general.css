@@ -1,0 +1,221 @@
+:root {
+    --primary-color: #0C113D;
+    --secondary-color: #294AF0;
+    --accent-color: #2989F0;
+    --highlight-color: #29F0D8;
+    --complementary-color: #4729F0;
+    --light-background-color: #78B2F0;
+    --border-color: #dee2e6;
+    --color-odd-column: #0C113D;
+    --color-even-column: #294AF0;
+    --padding-page-large: 50px;
+    --padding-page-medium: 30px;
+    --padding-page-small: 15px;
+    --gap-large: 15px;
+    --gap-medium: 10px;
+    --gap-small: 5px;
+    --padding-text: 1em;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --visited-link-color: #4729F0; /* Culoarea pentru linkurile vizitate */
+    --external-link-color: #FF0000; /* Culoarea pentru linkurile externe */
+    --hover-color: #FF5733; /* Culoare la hover pe linkuri */
+}
+
+body {
+    background-color: var(--light-background-color);
+    color: var(--primary-color);
+    font-family: 'Open Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1em;
+    text-align: center;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 1em;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: var(--highlight-color);
+}
+
+section {
+    padding: 2em;
+    border-bottom: 1px solid var(--secondary-color);
+    background-color: var(--light-background-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+section h2 {
+    color: var(--complementary-color);
+}
+
+figure {
+    margin: 0;
+    padding: 1em;
+    background-color: white;
+    border: 1px solid var(--secondary-color);
+}
+
+figcaption {
+    color: var(--accent-color);
+    font-style: italic;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1em;
+    text-align: center;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+address a, footer a {
+    color: white;
+    text-decoration: none;
+}
+
+address a:hover, footer a:hover {
+    color: var(--highlight-color);
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 5px double var(--primary-color);
+    margin-bottom: 1em;
+}
+
+caption {
+    caption-side: bottom;
+    font-size: 1.2em;
+    padding-top: 0.5em;
+}
+
+thead th {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 0.5em;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+tbody td, thead th {
+    border: 1px solid var(--secondary-color);
+    text-align: left;
+    padding: 0.5em;
+}
+
+tbody td:nth-child(odd) {
+    color: var(--color-odd-column);
+}
+
+tbody td:nth-child(even) {
+    color: var(--color-even-column);
+}
+
+tfoot td {
+    background-color: var(--secondary-color);
+    color: white;
+    text-align: center;
+    padding: 0.5em;
+    border-top: 1px solid var(--secondary-color);
+}
+
+tbody tr:hover {
+    background-color: var(--highlight-color);
+    color: white;
+    border: 5px solid var(--highlight-color);
+    transition: all 0.75s ease-in-out;
+}
+
+tbody tr:hover td {
+    border: 5px solid var(--highlight-color);
+}
+
+.container-iframe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    position: relative;
+}
+
+iframe {
+    width: 560px;
+    height: 315px;
+    border: 2px solid #294AF0;
+    border-radius: 8px;
+    margin-bottom: 5px;
+}
+
+.taburi-iframe {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 560px;
+}
+
+.taburi-iframe a {
+    color: var(--primary-color); /* Set text color to primary color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 50px;
+    background: linear-gradient(to bottom, var(--secondary-color) 0%, transparent 90%);
+    background-color: var(--secondary-color);
+    text-align: center;
+    margin: 0 5px;
+    border: 2px solid var(--primary-color);
+    border-style: double;
+    border-width: 5px;
+    border-radius: 0 0 25px 25px;
+    text-decoration: none;
+    font-size: 1em;
+    line-height: 1.2;
+    padding: 0 10px;
+    transition: all 1.5s ease;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.taburi-iframe a:hover {
+    background-color: var(--light-background-color);
+}
+
+.taburi-iframe a:hover {
+    background-color: var(--light-background-color);
+}

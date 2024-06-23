@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <!-- Meta settings and doctype -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Descoperă cele mai bune suplimente fitness pentru a-ți îmbunătăți performanța la antrenament. De la proteine la vitamine, avem tot ce ai nevoie.">
+    <meta name="keywords" content="Suplimente Fitness, Proteine, Aminoacizi, Vitamine, Echipament de Antrenament">
+    <meta name="author" content="Vrinceanu George Razvan">
+    <title>Suplimente Fitness - Îmbunătățește-ți Antrenamentul</title>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./resurse/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./resurse/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./resurse/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./resurse/favicon/site.webmanifest">
+    <link rel="mask-icon" href="./resurse/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="./resurse/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="./resurse/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="./resurse/css/reset.css" type="text/css"/>
+    <link rel="stylesheet" href="./resurse/css/nav.css" type="text/css"/>
+    <link rel="stylesheet" href="./resurse/css/nav1000.css" type="text/css" media="screen and (max-width: 1000px)" />
+    <link rel="stylesheet" href="./resurse/css/nav700.css" type="text/css" media="screen and (max-width: 700px)" />
+    <link rel="stylesheet" href="./resurse/css/stil.css" type="text/css"/>
+    <link rel="stylesheet" href="./resurse/css/layout.css" type="text/css"/>
+    <link rel="stylesheet" href="./resurse/css/link-top.css" type="text/css"/>
+    <link rel="stylesheet" href="./resurse/css/mathml.css" type="text/css"/>
+    <link rel="stylesheet" href="./resurse/css/print.css" type="text/css"/>
+</head>
+<body>
+    <!-- Header and Navigation -->
+    <header>
+        <nav class="main-nav">
+            <h1>Suplimente Fitness <i class="fas fa-dumbbell"></i></h1>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="hamburger-menu">
+                <div class="hamb-line"></div>
+                <div class="hamb-line"></div>
+                <div class="hamb-line"></div>
+            </label>
+            <ul class="menu-items">
+                <li><a href="#welcome" class="home" data-text="Acasa"></i> Acasa</a></li>
+                <li><a href="#welcome" data-text="Prezentare">Prezentare</a></li>
+                <li>
+                    <a href="#" data-text="Pagini">Pagini</a>
+                    <ul class="submenu">
+                        <li><a href="pagina1.html" data-text="Pagina 1">Pagina 1</a></li>
+                        <li><a href="pagina2.html" data-text="Pagina 2">Pagina 2</a></li>
+                        <li><a href="pagina3.html" data-text="Pagina 3">Pagina 3</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" data-text="Secțiuni">Secțiuni</a>
+                    <ul class="submenu">
+                        <li><a href="#products" data-text="Produse">Produse</a></li>
+                        <li><a href="#events" data-text="Evenimente">Evenimente</a></li>
+                        <li><a href="#announcements" data-text="Anunțuri">Anunțuri</a></li>
+                        <li><a href="#users" data-text="Utilizatori online">Utilizatori online</a></li>
+                    </ul>
+                </li>
+                <li><a href="#diverse" data-text="Diverse conținut">Diverse conținut</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main id="grid-pagina">
+        <!-- Page Content -->
+        <section id="welcome" class="section">
+            <h2>Bine ați venit</h2>
+            <p>Descoperiți cele mai eficiente <b>suplimente</b> pentru a vă sprijini obiectivele de <b>fitness</b> și <b>sănătate</b>.</p>
+        </section>
+        <section id="products" class="section">
+            <h2>Produse</h2>
+            <figure>
+                <picture>
+                    <!-- Responsive images for different screens -->
+                    <source media="(min-width: 1024px)" srcset="./resurse/imagini/Proteine_Whey_Clear_large.png">
+                    <source media="(min-width: 768px)" srcset="./resurse/imagini/Proteine_Whey_Clear_medium.png">
+                    <img src="./resurse/imagini/Proteine_Whey_Clear_small.png" alt="Proteină Whey Clear">
+                </picture>
+                <figcaption><i>Proteină Whey Clear</i> - Ideală pentru refacerea musculară rapidă.</figcaption>
+            </figure>
+            <figure>
+                <picture>
+                    <!-- Responsive images for different screens -->
+                    <source media="(min-width: 1024px)" srcset="./resurse/imagini/Creatina_Monohidrata_large.png">
+                    <source media="(min-width: 768px)" srcset="./resurse/imagini/Creatina_Monohidrata_medium.png">
+                    <img src="./resurse/imagini/Creatina_Monohidrata_small.png" alt="Creatină Monohidrată">
+                </picture>
+                <figcaption><i>Creatină Monohidrată</i> - Îmbunătățește performanța și forța.</figcaption>
+            </figure>
+        </section>
+        <section id="events" class="section">
+            <h2>Evenimente</h2>
+            <p>Placeholder for calendar events.</p>
+        </section>
+        <section id="announcements" class="section">
+            <h2>Anunțuri</h2>
+            <p>Placeholder for announcements.</p>
+        </section>
+        <section id="users" class="section">
+            <h2>Utilizatori online</h2>
+            <p>Placeholder for online users list.</p>
+        </section>
+        <section id="stats" class="section">
+            <h2>Statistici utilizator</h2>
+            <p>Placeholder for user statistics.</p>
+        </section>
+        <section id="info" class="section">
+            <h2>Date site/server</h2>
+            <p>Placeholder for site and server data.</p>
+        </section>
+        <section id="diverse" class="section">
+            <h2>Diverse conținut</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Produs</th>
+                            <th>Preț</th>
+                            <th>Descriere</th>
+                            <th>Reducere</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Proteine Whey</td>
+                            <td>150 RON</td>
+                            <td>Pudră proteică pentru creșterea masei musculare</td>
+                            <td rowspan="2">20%</td>
+                        </tr>
+                        <tr>
+                            <td>Aminoacizi BCAA</td>
+                            <td>120 RON</td>
+                            <td>Supliment pentru recuperare și rezistență</td>
+                        </tr>
+                        <tr>
+                            <td>Vitamine</td>
+                            <td>80 RON</td>
+                            <td>Complex de vitamine pentru sănătate generală</td>
+                            <td>10%</td>
+                        </tr>
+                        <tr>
+                            <td>Creatină</td>
+                            <td>100 RON</td>
+                            <td>Supliment pentru forță și putere</td>
+                            <td>15%</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="4">Cele mai bune oferte pentru suplimente fitness!</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <div class="container-iframe">
+                <iframe name="ifr-video" width="560" height="315" src="https://www.youtube.com/embed/kv91H2gAwe8?si=TvfLDGABz3M6Q4nl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="taburi-iframe">
+                    <a href="https://www.youtube.com/embed/kv91H2gAwe8?si=TvfLDGABz3M6Q4nl" target="ifr-video">Rețeta tort vanilie</a>
+                    <a href="https://www.youtube.com/embed/He_-f1ZCCJE?si=Iba_-xmKrxcl6RHW" target="ifr-video">Rețeta tort ciocolată</a>
+                    <a href="https://www.youtube.com/embed/Apgm6lKBfUA?si=dorucGEPaxmbVU18" target="ifr-video">Rețeta tort căpșuni</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="index-intrebari" class="section">
+            <h2>Index întrebări <i class="fas fa-heartbeat fa-spin"></i></h2> <!-- Icon animat -->
+            <details>
+                <summary>Cum să alegeți suplimentele potrivite?</summary>
+                <p>Analizați obiectivele personale de fitness și sănătate, iar apoi cercetați ingredientele și recenziile produselor pentru a vă asigura că sunt potrivite pentru nevoile dumneavoastră.</p>
+            </details>
+            <details>
+                <summary>Ce sunt aminoacizii și de ce sunt importanți?</summary>
+                <p>Aminoacizii sunt blocurile de construcție ale proteinelor, esențiali pentru repararea și creșterea musculară, precum și pentru multe alte funcții corporale.</p>
+            </details>
+            <details>
+                <summary>Este sigur să luați suplimente zilnic?</summary>
+                <p>În general, suplimentele luate conform indicațiilor sunt sigure. Totuși, este important să consultați un profesionist în domeniul sănătății înainte de a începe orice regim nou de suplimente.</p>
+            </details>
+            <section id="sfaturi-alegere-suplimente">
+                <h3>Sfaturi pentru Alegerea Suplimentelor Potrivite</h3>
+                <dl>
+                    <dt>Identificați-vă nevoile</dt>
+                    <dd>Analizați obiectivele de <b>fitness</b> pentru a alege <b>suplimentele</b> care vă pot ajuta cel mai mult.</dd>
+                    <dt>Cercetați produsele</dt>
+                    <!-- Iframe pentru video -->
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/IR5jW9iNNiw?si=fmYaAywymsDJ_fZB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <dd>Verificați ingredientele și recenziile pentru a vă asigura că alegeți <b>suplimente</b> de calitate.</dd>
+                    <!-- Link pentru download -->
+                    <dd><a href="./resurse/documente/ghid-suplimente.pdf" download="Ghidul Suplimentelor Nutritive">Descarcă Ghidul Suplimentelor Nutritive</a></dd>
+                    <!-- Linkuri pentru iframe -->
+                    <dd><a href="https://www.youtube.com/embed/unowqBYbWeg?si=m7p84vVTzMS_dch6"  target="ifr-video">link 1</a></dd>
+                    <dd><a href="https://www.youtube.com/embed/kv91H2gAwe8?si=aHxfpiJiNKLJTSeA"  target="ifr-video">link 2</a></dd>
+                    <!-- Link extern -->
+                    <dd>Pentru mai multe informații despre beneficiile suplimentelor nutritive, vizitați <a href="https://www.healthline.com/nutrition/supplements" target="_blank" rel="noopener noreferrer">Healthline Supplements Guide</a>.</dd>
+                </dl>
+                <!-- Citat -->
+                <blockquote>
+                    "<q>Alegerea corectă a suplimentelor poate face diferența dintre un progres lent și rezultate remarcabile.</q>" - <i>Dr. Fitness</i>
+                </blockquote>
+            </section>
+        </section>
+    </main>
+    
+    <!-- Footer cu informații de contact -->
+    <footer>
+        <address>
+            <a href="mailto:vrinceanurazvan2003@gmail.com"><i class="fas fa-envelope"></i> vrinceanurazvan2003@gmail.com</a><br>
+            <a href="tel:+40746985932"><i class="fas fa-phone"></i> +40746985932</a><br>
+            <a href="https://wa.me/40746985932" target="_blank"><i class="fab fa-whatsapp"></i> Chat pe WhatsApp</a><br>
+            <a href="https://www.google.com/maps?q=Facultatea+de+Matematica+si+Informatica,+Bucuresti" target="_blank"><i class="fas fa-map-marker-alt"></i> Facultatea de Matematică și Informatică, București</a>
+        </address>
+        <p>&copy; 2024 Suplimente Fitness. Toate drepturile rezervate.</p>
+        <a href="#" id="link-top"><div id="triunghi">&#129081;</div></a>
+    </footer>
+    
+    <!-- Linkuri externe -->
+    <a href="https://www.myprotein.com/" target="_blank" rel="noopener">Vizitează MyProtein</a>
+    <a href="https://www.gymbeam.ro/" target="_blank" rel="noopener">Vizitează GymBeam</a>
+    <a href="https://www.bodybuilding.com/" target="_blank" rel="noopener">Vizitează Bodybuilding.com</a>
+    <a href="https://www.fitnessmagazine.com/" target="_blank" rel="noopener">Vizitează FitnessMagazine.com</a>
+</body>
+</html>

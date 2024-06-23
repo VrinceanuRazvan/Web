@@ -1,0 +1,23 @@
+@media (max-width: 1000px) {
+    header {
+        padding: var(--padding-page-medium);
+    }
+
+    section {
+        padding: var(--padding-page-medium);
+    }
+
+    .taburi-iframe {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .taburi-iframe a {
+        margin-bottom: var(--gap-medium);
+    }
+
+    iframe {
+        width: 100%;
+        height: auto;
+    }
+}

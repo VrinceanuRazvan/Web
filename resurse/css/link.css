@@ -1,0 +1,40 @@
+/* Define CSS Variables */
+:root {
+    --primary-color: #0C113D;
+    --secondary-color: #294AF0;
+    --accent-color: #2989F0;
+    --highlight-color: #29F0D8;
+    --complementary-color: #4729F0;
+    --light-background-color: #78B2F0;
+    --border-color: #dee2e6;
+    --visited-link-color: #4729F0; /* Example visited link color */
+}
+
+/* General link styles */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    position: relative;
+    z-index: 0;
+}
+
+a:visited {
+    color: var(--visited-link-color);
+}
+
+/* Hover effect for main content links */
+main a {
+    background: radial-gradient(circle, var(--highlight-color) 0%, transparent 40%, transparent 100%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 0% 0%;
+    transition: background-size 0.5s ease-in-out;
+}
+
+main a:hover {
+    background-size: 100% 100%;
+}
+
+main a:active {
+    border: 2px solid var(--highlight-color);
+}
