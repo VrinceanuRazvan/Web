@@ -3,6 +3,8 @@
 <head>
   <%- include('../fragmente/head') %>
   <title>Pagina Principală</title>
+  <link rel="stylesheet" href="/resurse/css/duotone.css">
+  <link rel="stylesheet" href="/resurse/css/scrolling-text.css">
 </head>
 <body>
   <%- include('../fragmente/header') %>
@@ -10,18 +12,14 @@
     <section id="welcome" class="section">
       <h2>Bine ați venit</h2>
       <p>Descoperiți cele mai eficiente <b>suplimente</b> pentru a vă sprijini obiectivele de <b>fitness</b> și <b>sănătate</b>.</p>
+      <div class="scroll-container">
+        <div class="scroll-text">Acesta este un text care se plimbă orizontal pe ecran.</div>
+      </div>
     </section>
     <section id="products" class="section">
       <h2>Produse</h2>
-      <figure>
-        <picture>
-          <!-- Responsive images for different screens -->
-          <source media="(min-width: 1024px)" srcset="/resurse/imagini/Proteine_Whey_Clear_large.png">
-          <source media="(min-width: 768px)" srcset="/resurse/imagini/Proteine_Whey_Clear_medium.png">
-          <img src="/resurse/imagini/Proteine_Whey_Clear_small.png" alt="Proteină Whey Clear">
-        </picture>
-        <figcaption><i>Proteină Whey Clear</i> - Ideală pentru refacerea musculară rapidă.</figcaption>
-      </figure>
+      <div id="duotone-image"></div>
+      <figcaption><i>Proteină Whey Clear</i> - Ideală pentru refacerea musculară rapidă.</figcaption>
       <figure>
         <picture>
           <!-- Responsive images for different screens -->

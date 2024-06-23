@@ -17,5 +17,10 @@
     "Antrenament"
   ],
   "author": "Vrinceanu George Razvan",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "sass": "^1.77.6",
+    "sharp": "^0.33.4"
+  }
 }

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <%- include('../fragmente/head') %>
+  <title>Galerie</title>
+</head>
+<body>
+  <%- include('../fragmente/header') %>
+  <main id="grid-pagina">
+    <section id="galerie-page" class="section">
+      <%- include('../fragmente/galerie', { imagini: imagini, cale_galerie: cale_galerie }) %>
+    </section>
+  </main>
+  <%- include('../fragmente/footer') %>
+</body>
+</html>

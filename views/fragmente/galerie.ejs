@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= titlu %></title>
+  <link rel="stylesheet" href="/resurse/css/style.css">
+</head>
+<body>
+  <div class="gallery-grid">
+    <% imagini.forEach((img, index) => { %>
+      <% if (index % 6 === 0 || index % 6 === 4) { %>
+        <figure class="gallery-item">
+          <picture>
+            <source media="(max-width: 600px)" srcset="/<%= cale_galerie %>/small/<%= img.fisier_imagine %>">
+            <source media="(max-width: 1200px)" srcset="/<%= cale_galerie %>/medium/<%= img.fisier_imagine %>">
+            <img src="/<%= cale_galerie %>/large/<%= img.fisier_imagine %>" alt="<%= img.continut_alternativ || img.nume_poza %>" title="<%= img.descriere_poza %>">
+          </picture>
+          <figcaption><%= index + 1 %>. <%= img.descriere_poza %></figcaption>
+        </figure>
+      <% } else if (index % 6 === 1 || index % 6 === 2 || index % 6 === 3) { %>
+        <figure class="gallery-item">
+          <picture>
+            <source media="(max-width: 600px)" srcset="/<%= cale_galerie %>/small/<%= img.fisier_imagine %>">
+            <source media="(max-width: 1200px)" srcset="/<%= cale_galerie %>/medium/<%= img.fisier_imagine %>">
+            <img src="/<%= cale_galerie %>/large/<%= img.fisier_imagine %>" alt="<%= img.continut_alternativ || img.nume_poza %>" title="<%= img.descriere_poza %>">
+          </picture>
+          <figcaption><%= index + 1 %>. <%= img.descriere_poza %></figcaption>
+        </figure>
+        <div class="spacer"></div>
+      <% } else if (index % 6 === 5) { %>
+        <div class="spacer"></div>
+      <% } %>
+    <% }); %>
+  </div>
+</body>
+</html>

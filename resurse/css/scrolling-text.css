@@ -1,0 +1,44 @@
+/* scrolling-text.css */
+
+.scroll-container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+  }
+  
+  .scroll-text {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll-horizontal 10s linear infinite;
+  }
+  
+  @keyframes scroll-horizontal {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  /* Optional: Vertical scrolling */
+  /*
+  .scroll-container.vertical {
+    height: 100px; // Adjust based on your needs
+  }
+  
+  .scroll-text.vertical {
+    animation: scroll-vertical 10s linear infinite;
+  }
+  
+  @keyframes scroll-vertical {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(-100%);
+    }
+  }
+  */
+  

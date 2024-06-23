@@ -1,223 +1,166 @@
-// Variables
-$primary-color: #0C113D;
-$secondary-color: #294AF0;
-$highlight-color: #29F0D8;
-$background-color: #78B2F0;
-$font-color: white;
-$font-family: 'Open Sans', Arial, sans-serif;
-$transition-duration: 0.3s;
-$shadow-blur: 3px;
-$hamburger-bar-color: $font-color;
-$animation-delay: 0.3s;
-$number-of-bars: 3;
-
-// Mixin for transitions
-@mixin transition($property, $duration) {
-  transition: $property $duration ease-in-out;
+:root {
+  --primary-color: #0C113D;
+  --secondary-color: #294AF0;
+  --highlight-color: #29F0D8;
+  --background-color: #78B2F0;
+  --font-color: white;
+  --font-family: 'Open Sans', Arial, sans-serif;
+  --transition-duration: 0.3s;
+  --shadow-blur: 3px;
 }
 
-// Mixin for delay animation
-@mixin delay-animation($delay) {
-  animation-delay: $delay;
+body {
+  margin: 0;
+  font-family: var(--font-family);
 }
 
-// Main navigation styling
 nav.main-nav {
   position: relative;
-  font-family: $font-family;
+  font-family: var(--font-family);
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 10px;
-  background-color: $primary-color;
+  background-color: var(--primary-color);
 
   h1 {
-    margin: 0;
-    padding-left: 70px; // Adjust padding to make space for the hamburger menu
+      margin: 0;
+      padding-left: 70px;
+      color: var(--font-color);
   }
 
   .hamburger-menu {
-    display: none;
-    position: absolute;
-    top: 50%;
-    left: 15px;
-    transform: translateY(-50%);
-    cursor: pointer;
-    z-index: 2000;
-    
-    .hamb-line {
-      background-color: $hamburger-bar-color;
-      height: 3px;
-      width: 30px;
-      margin: 6px 0;
-      opacity: 0;
-    }
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 15px;
+      transform: translateY(-50%);
+      cursor: pointer;
+      z-index: 2000;
 
-    // Animațiile pentru fiecare bară
-    @for $i from 1 through $number-of-bars {
-      .hamb-line:nth-child(#{$i}) {
-        @include delay-animation(($i - 1) * $animation-delay);
-        animation: fadeIn 1s forwards;
+      .hamb-line {
+          width: 30px;
+          height: 3px;
+          background-color: var(--font-color);
+          margin: 6px 0;
+          transition: 0.4s;
       }
-    }
   }
 
   .menu-toggle {
-    display: none;
+      display: none;
   }
 
   ul.menu-items {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    background-color: $primary-color;
-
-    li {
-      position: relative;
-
-      a {
-        color: $font-color;
-        text-decoration: none;
-        padding: 10px 20px;
-        display: flex;
-        align-items: center;
-        position: relative;
-        overflow: visible;
-        @include transition(background-color, $transition-duration);
-
-        &::before {
-          content: attr(data-text);
-          position: absolute;
-          top: -150%;
-          left: 0;
-          width: 100%;
-          color: $font-color;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          text-shadow: 0 0 $shadow-blur $font-color;
-          @include transition(top, $transition-duration);
-        }
-
-        &:hover {
-          background-color: $secondary-color;
-
-          &::before {
-            top: 30%;
-          }
-        }
-
-        &:not(:hover)::before {
-          top: -150%;
-        }
-      }
-
-      .submenu {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        background-color: $primary-color;
-        border: 1px solid $secondary-color;
-        transform: scaleY(0);
-        transform-origin: top;
-        @include transition(transform, $transition-duration);
-        overflow: hidden;
-
-        li {
-          a {
-            padding: 10px 20px;
-            position: relative;
-            overflow: visible; // Ensure the pseudo-element is visible outside
-            @include transition(all, $transition-duration);
-
-            &::before {
-              content: attr(data-text);
-              position: absolute;
-              top: -150%; // Start further outside the button
-              left: 0;
-              width: 100%;
-              color: $font-color;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              text-shadow: 0 0 $shadow-blur $font-color;
-              @include transition(top, $transition-duration);
-            }
-
-            &:hover {
-              background-color: $highlight-color;
-
-              &::before {
-                top: 0;
-              }
-            }
-
-            &:not(:hover)::before {
-              top: -150%;
-            }
-          }
-        }
-      }
-
-      &:hover .submenu {
-        display: block;
-        transform: scaleY(1);
-      }
-    }
-  }
-
-  @media screen and (max-width: 700px) {
-    .hamburger-menu {
-      display: block;
-    }
-
-    .hamb-line {
-      animation: fadeIn 1s forwards;
-    }
-
-    ul.menu-items {
-      display: none;
-      flex-direction: column;
-    }
-
-    .menu-toggle:checked + .hamburger-menu + ul.menu-items {
+      list-style: none;
       display: flex;
-    }
-
-    li a {
-      font-size: 0.8em;
-    }
-  }
-}
-
-// Additional styles for medium screens
-@media screen and (max-width: 1000px) {
-  nav.main-nav {
-    ul.menu-items {
-      flex-direction: column;
+      gap: 20px;
+      background-color: var(--primary-color);
 
       li {
-        a {
-          font-size: 0.9em;
-        }
-      }
-    }
-  }
-}
+          position: relative;
 
-// Animația fadeIn pentru barele hamburger
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(-10px) rotate(0deg);
-  }
-  50% {
-    opacity: 0.5;
-    transform: translateY(5px) rotate(15deg);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0) rotate(0deg);
+          a {
+              color: var(--font-color);
+              text-decoration: none;
+              padding: 10px 20px;
+              display: flex;
+              align-items: center;
+              position: relative;
+              overflow: visible;
+              transition: background-color var(--transition-duration) ease-in-out;
+
+              &::before {
+                  content: attr(data-text);
+                  position: absolute;
+                  top: -150%;
+                  left: 0;
+                  width: 100%;
+                  color: var(--font-color);
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  text-shadow: 0 0 var(--shadow-blur) var(--font-color);
+                  opacity: 0;
+                  transition: top var(--transition-duration) ease-in-out, opacity var(--transition-duration) ease-in-out;
+                  pointer-events: none;
+              }
+
+              i {
+                  margin-right: 5px;
+                  text-shadow: 0 0 var(--shadow-blur) var(--font-color);
+              }
+
+              &:hover {
+                  background-color: var(--secondary-color);
+
+                  &::before {
+                      top: 30%;
+                      opacity: 1;
+                  }
+              }
+
+              &:not(:hover)::before {
+                  top: -150%;
+                  opacity: 0;
+              }
+          }
+
+          .submenu {
+              display: block;
+              position: absolute;
+              top: 100%;
+              left: 0;
+              background-color: var(--primary-color);
+              border: 1px solid var(--secondary-color);
+              max-height: 0;
+              visibility: hidden;
+              opacity: 0;
+              overflow: hidden;
+              z-index: 1000;
+              transition: max-height var(--transition-duration) ease-in-out, visibility 0s linear var(--transition-duration), opacity 0s linear var(--transition-duration);
+
+              li {
+                  position: relative;
+
+                  a {
+                      padding: 10px 20px;
+                      position: relative;
+                      transition: background-color var(--transition-duration) ease-in-out;
+                      overflow: hidden;
+
+                      &::after {
+                          content: '';
+                          position: absolute;
+                          bottom: 0;
+                          left: 0;
+                          width: 0;
+                          height: 2px;
+                          background-color: var(--highlight-color);
+                          transition: width var(--transition-duration) ease-in-out;
+                      }
+
+                      &:hover {
+                          background-color: var(--secondary-color);
+
+                          &::after {
+                              width: 100%;
+                          }
+                      }
+
+                      &::before {
+                          display: none;
+                      }
+                  }
+              }
+          }
+
+          &:hover .submenu {
+              max-height: 500px;
+              visibility: visible;
+              opacity: 1;
+              transition: max-height var(--transition-duration) ease-in-out, visibility 0s linear 0s, opacity 0s linear 0s;
+          }
+      }
   }
 }

@@ -1,0 +1,166 @@
+:root {
+  --primary-color: #0C113D;
+  --secondary-color: #294AF0;
+  --highlight-color: #29F0D8;
+  --background-color: #78B2F0;
+  --font-color: white;
+  --font-family: 'Open Sans', Arial, sans-serif;
+  --transition-duration: 0.3s;
+  --shadow-blur: 3px;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+}
+
+nav.main-nav {
+  position: relative;
+  font-family: var(--font-family);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: var(--primary-color);
+}
+
+nav.main-nav h1 {
+  margin: 0;
+  padding-left: 70px;
+  color: var(--font-color);
+}
+
+.hamburger-menu {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 2000;
+}
+
+.hamburger-menu .hamb-line {
+  width: 30px;
+  height: 3px;
+  background-color: var(--font-color);
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+nav.main-nav ul.menu-items {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  background-color: var(--primary-color);
+}
+
+nav.main-nav ul.menu-items li {
+  position: relative;
+}
+
+nav.main-nav ul.menu-items li a {
+  color: var(--font-color);
+  text-decoration: none;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: visible;
+  transition: background-color var(--transition-duration) ease-in-out;
+}
+
+nav.main-nav ul.menu-items li a::before {
+  content: attr(data-text);
+  position: absolute;
+  top: -150%;
+  left: 0;
+  width: 100%;
+  color: var(--font-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-shadow: 0 0 var(--shadow-blur) var(--font-color);
+  opacity: 0;
+  transition: top var(--transition-duration) ease-in-out, opacity var(--transition-duration) ease-in-out;
+  pointer-events: none;
+}
+
+nav.main-nav ul.menu-items li a i {
+  margin-right: 5px;
+  text-shadow: 0 0 var(--shadow-blur) var(--font-color);
+}
+
+nav.main-nav ul.menu-items li a:hover {
+  background-color: var(--secondary-color);
+}
+
+nav.main-nav ul.menu-items li a:hover::before {
+  top: 30%;
+  opacity: 1;
+}
+
+nav.main-nav ul.menu-items li a:not(:hover)::before {
+  top: -150%;
+  opacity: 0;
+}
+
+nav.main-nav ul.menu-items li .submenu {
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--primary-color);
+  border: 1px solid var(--secondary-color);
+  max-height: 0;
+  visibility: hidden;
+  opacity: 0;
+  overflow: hidden;
+  z-index: 1000;
+  transition: max-height var(--transition-duration) ease-in-out, visibility 0s linear var(--transition-duration), opacity 0s linear var(--transition-duration);
+}
+
+nav.main-nav ul.menu-items li:hover .submenu {
+  max-height: 500px;
+  visibility: visible;
+  opacity: 1;
+  transition: max-height var(--transition-duration) ease-in-out, visibility 0s linear 0s, opacity 0s linear 0s;
+}
+
+nav.main-nav ul.menu-items li .submenu li {
+  position: relative;
+}
+
+nav.main-nav ul.menu-items li .submenu li a {
+  padding: 10px 20px;
+  position: relative;
+  transition: background-color var(--transition-duration) ease-in-out;
+  overflow: hidden;
+}
+
+nav.main-nav ul.menu-items li .submenu li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--highlight-color);
+  transition: width var(--transition-duration) ease-in-out;
+}
+
+nav.main-nav ul.menu-items li .submenu li a:hover {
+  background-color: var(--secondary-color);
+}
+
+nav.main-nav ul.menu-items li .submenu li a:hover::after {
+  width: 100%;
+}
+
+nav.main-nav ul.menu-items li .submenu li a::before {
+  display: none;
+}

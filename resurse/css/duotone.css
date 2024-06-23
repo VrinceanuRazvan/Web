@@ -1,0 +1,33 @@
+#duotone-image {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    background-image: url("/resurse/imagini/Proteine_Whey_Clear_large.png");
+    background-size: cover;
+    filter: grayscale(0); /* Initial state without grayscale */
+    transition: filter 0.5s linear; /* Smooth transition for grayscale */
+}
+
+#duotone-image::before, #duotone-image::after {
+    content: " ";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transition: all 0.5s linear; /* Smooth transition for hover effect */
+}
+
+#duotone-image::before {
+    background-color: rgb(0, 0, 255); /* First color for duotone effect */
+    mix-blend-mode: lighten;
+}
+
+#duotone-image::after {
+    background-color: rgb(205, 0, 255); /* Second color for duotone effect */
+    mix-blend-mode: darken;
+}
+
+#duotone-image:hover {
+    filter: grayscale(100%); /* Apply grayscale on hover */
+}

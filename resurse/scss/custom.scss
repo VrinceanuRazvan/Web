@@ -1,0 +1,35 @@
+// Import Bootstrap
+@import 'node_modules/bootstrap/scss/bootstrap';
+
+// Schimbă variabilele Bootstrap aici
+$theme-colors: (
+  "primary": #ff5733,
+  "secondary": #33c1ff
+);
+
+$body-bg: #f8f9fa;
+$body-color: #343a40;
+
+$font-family-base: 'Arial, sans-serif';
+$font-size-base: 1rem;
+$border-radius: .25rem;
+
+$headings-font-family: 'Georgia, serif';
+$headings-line-height: 1.2;
+
+$btn-padding-y: .375rem;
+$btn-padding-x: .75rem;
+$btn-font-weight: 400;
+$btn-border-radius: .25rem;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+// Include Bootstrap
+@import 'node_modules/bootstrap/scss/bootstrap';

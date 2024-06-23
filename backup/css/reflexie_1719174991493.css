@@ -1,0 +1,30 @@
+.reflect-text {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+}
+
+.text {
+  font-size: 1em;
+  color: black;
+  text-align: center;
+}
+
+.text-reflection {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  font-size: 1em;
+  color: black;
+  opacity: 0.5;
+  transform: scaleY(-1);
+  mask-image: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+  font-style: italic;
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+.reflect-text:hover .text-reflection {
+  transform: scaleY(-2);
+}

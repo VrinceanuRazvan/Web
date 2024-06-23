@@ -1,0 +1,70 @@
+body {
+  overflow-x: hidden;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 100%; /* Ensure grid doesn't overflow */
+}
+
+.gallery-grid .gallery-item {
+  background-color: #78B2F0; 
+  border: 1px solid #78B2F0;
+  border-radius: 10px; /* Make borders rounder */
+  transition: all 0.8s ease-in-out;
+  filter: sepia(100%);
+  box-sizing: border-box; /* Include padding and border in element's width and height */
+}
+
+.gallery-grid .spacer {
+  width: 100%;
+  padding-top: 100%; /* Maintain aspect ratio */
+  background: transparent;
+}
+
+/* Adjust grid for medium screens */
+@media (max-width: 1000px) and (min-width: 701px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .gallery-grid .spacer {
+    display: none;
+  }
+}
+
+/* Adjust grid for small screens */
+@media (max-width: 700px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+  .gallery-grid .spacer {
+    display: none;
+  }
+}
+
+.gallery-grid .gallery-item:hover {
+  filter: sepia(0%);
+}
+
+.gallery-grid figcaption {
+  text-align: center;
+  font-style: italic;
+  transition: color 0.8s ease-in-out, text-shadow 0.8s ease-in-out;
+}
+
+.gallery-grid .gallery-item:hover figcaption {
+  color: #000;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.gallery-grid picture img {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-width: 100%; /* Ensure image doesn't overflow */
+  box-sizing: border-box; /* Include padding and border in element's width and height */
+}

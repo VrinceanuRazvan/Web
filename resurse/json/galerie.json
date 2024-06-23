@@ -1,39 +1,76 @@
 {
-	"cale_galerie":"resurse/imagini/galerie",
+	"cale_galerie": "resurse/imagini/galerie",
 	"imagini": [
-		{
-			"fisier":"briose-frisca.png",
-			"descriere":"Brioșe",
-			"luni":["martie","februarie","noiembrie","aprilie"]
-		},
-		{
-			"fisier":"clatite.png",
-			"descriere":"Clătite cu dulceață",
-			"luni":["ianuarie","februarie","iunie"]
-			
-		},
-		{
-			"fisier":"gogosi.png",
-			"descriere":"Gogoși glazurate",
-			"luni":["ianuarie","noiembrie","iunie","martie","aprilie"]
-		},
-		{
-			"fisier":"tort-scortisoara.png",
-			"descriere":"Tort cu scorțisoară",
-			
-			"luni":["noiembrie","aprilie"]
-		},
-		{
-			"fisier":"prajitura-ciocolata.png",
-			"descriere":"Prăjitură cu ciocolată"
-		},
-		{
-			"fisier":"tarta-afine.png",
-			"descriere":"Tartă cu afine"
-		},
-		{
-			"fisier":"tort-trandafiri.png",
-			"descriere":"Tort special"
-		}
+	  {
+		"fisier_imagine": "Creatina.jpg",
+		"nume_poza": "Creatina",
+		"continut_alternativ": "Creatina imagine",
+		"descriere_poza": "Creatina pentru forta",
+		"intervale_zile": [["luni", "miercuri"], ["sambata", "sambata"]]
+	  },
+	  {
+		"fisier_imagine": "Proteina.jpg",
+		"nume_poza": "Proteina Whey",
+		"continut_alternativ": "Proteina imagine",
+		"descriere_poza": "Proteina pentru masa musculara",
+		"intervale_zile": [["marti", "joi"], ["vineri", "vineri"]]
+	  },
+	  {
+		"fisier_imagine": "MassGainer.jpg",
+		"nume_poza": "Mass Gainer",
+		"continut_alternativ": "Mass Gainer imagine",
+		"descriere_poza": "Supliment pentru creșterea masei",
+		"intervale_zile": [["duminica", "duminica"], ["miercuri", "miercuri"]]
+	  },
+	  {
+		"fisier_imagine": "Collagen.jpg",
+		"nume_poza": "Colagen",
+		"continut_alternativ": "Colagen imagine",
+		"descriere_poza": "Supliment pentru sănătatea articulațiilor",
+		"intervale_zile": [["luni", "luni"], ["vineri", "vineri"]]
+	  },
+	  {
+		"fisier_imagine": "BetaAlanin.jpg",
+		"nume_poza": "Beta-Alanin",
+		"continut_alternativ": "Beta-Alanin imagine",
+		"descriere_poza": "Supliment pentru performanță",
+		"intervale_zile": [["marti", "marti"], ["sambata", "sambata"]]
+	  },
+	  {
+		"fisier_imagine": "FishOil.jpg",
+		"nume_poza": "Ulei de pește",
+		"continut_alternativ": "Ulei de pește imagine",
+		"descriere_poza": "Supliment pentru sănătatea inimii",
+		"intervale_zile": [["miercuri", "miercuri"], ["duminica", "duminica"]]
+	  },
+	  {
+		"fisier_imagine": "MultiVitamin.jpg",
+		"nume_poza": "Multivitamine",
+		"continut_alternativ": "Multivitamine imagine",
+		"descriere_poza": "Complex de vitamine",
+		"intervale_zile": [["duminica", "duminica"], ["luni", "luni"]]
+	  },
+	  {
+		"fisier_imagine": "BCAA.jpg",
+		"nume_poza": "BCAA",
+		"continut_alternativ": "BCAA imagine",
+		"descriere_poza": "Aminoacizi pentru recuperare",
+		"intervale_zile": [["duminica", "duminica"], ["marti", "marti"]]
+	  },
+	  {
+		"fisier_imagine": "PreWorkout.jpg",
+		"nume_poza": "Pre-Workout",
+		"continut_alternativ": "Pre-Workout imagine",
+		"descriere_poza": "Supliment pentru energie",
+		"intervale_zile": [["duminica", "duminica"], ["miercuri", "miercuri"]]
+	  },
+	  {
+		"fisier_imagine": "Glutamine.jpg",
+		"nume_poza": "Glutamina",
+		"continut_alternativ": "Glutamina imagine",
+		"descriere_poza": "Supliment pentru recuperare",
+		"intervale_zile": [["duminica", "duminica"], ["joi", "joi"]]
+	  }
 	]
-}
+  }
+  
